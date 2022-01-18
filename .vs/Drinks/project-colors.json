@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e0f043dc-dec6-4c40-b4a5-a8b1144e6b16": {
+      "ProjectGuid": "e0f043dc-dec6-4c40-b4a5-a8b1144e6b16",
+      "DisplayName": "Drinks",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
