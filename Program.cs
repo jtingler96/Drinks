@@ -12,27 +12,16 @@ namespace Drinks
     {
         static void Main(string[] args)
         {
+            //List the drink categories
+            ApiHelper.listCategoriesCall();
 
-            var options = new RestClientOptions("https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")
-            {
-                ThrowOnAnyError = true,
-                Timeout = 1000
-            };
-            var client = new RestClient(options);
+            //select a category and view the drinks in that category
+            ApiHelper.categoryCall();
 
-            var request = new RestRequest();
-
-            var response = client.GetAsync(request).Result;
-
-            Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(response.Content);
-
-            for (int i = 0; i < myDeserializedClass.drinks.Count; i++)
-            {
-                Console.WriteLine(myDeserializedClass.drinks[i].strCategory);
-            }
+            //select a drink and view the instructions to make it
+            ApiHelper.drinkCall();
 
             Console.Read();
-
         }
     }
 }

@@ -8,7 +8,9 @@ namespace Drinks
 {
     public class Drink
     {
-        public string strCategory { get; set; }
+        public string strCategory { get; set; } 
+        public string strDrink { get; set; }
+        public string strInstructions { get; set; }
     }
 
     public class Root
